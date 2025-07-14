@@ -1,9 +1,9 @@
 FROM tomcat:9.0.85-jdk17
 
-ENV TZ=Asia/Kolkata
-
+# Clean default apps
 RUN rm -rf /usr/local/tomcat/webapps/*
 
+# Copy WAR into Tomcat
 COPY target/Mini_project-crudOperation-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
