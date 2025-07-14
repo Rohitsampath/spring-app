@@ -32,12 +32,32 @@
 	</properties>
 	<dependencies>
 	
+	
 			<!-- https://mvnrepository.com/artifact/org.eclipse.jetty/apache-jstl -->
 <dependency>
     <groupId>org.eclipse.jetty</groupId>
     <artifactId>apache-jstl</artifactId>
     <version>10.0.1</version>
 </dependency>
+<dependency>
+    <groupId>javax.persistence</groupId>
+    <artifactId>javax.persistence-api</artifactId>
+    <version>2.2</version>
+</dependency>
+
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>5.6.15.Final</version> <!-- compatible with Spring Boot 2.7.x -->
+</dependency>
+
+<dependency>
+    <groupId>javax.persistence</groupId>
+    <artifactId>javax.persistence-api</artifactId>
+    <version>2.2</version>
+</dependency>
+
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -66,13 +86,14 @@
 			<artifactId>ojdbc11</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-	  <dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+<dependency>
     <groupId>org.projectlombok</groupId>
     <artifactId>lombok</artifactId>
-    <version>1.18.30</version> <!-- Make sure to include this -->
-    <scope>provided</scope>
-  </dependency>
-
+ 
+</dependency>
+	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
@@ -89,18 +110,13 @@
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<annotationProcessorPaths>
-						<path>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</path>
-					</annotationProcessorPaths>
-				</configuration>
-			</plugin>
+		
+		 
+	
+
+
+
+			
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

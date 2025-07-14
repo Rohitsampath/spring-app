@@ -26,7 +26,7 @@ public class ActorMgmtServiceImpl implements IActorMgmtService{
 	public String registerActors(Actor actor) {
 		
 		//set windows username as created by username
-		actor.setCreatedBy(System.getProperty("user.name"));
+	//	actor.setCreatedBy(System.getProperty("user.name"));
 		
 		int id=actorRepo.save(actor).getAid();
 		return "Actor is saved with id value "+id;
@@ -42,8 +42,8 @@ public class ActorMgmtServiceImpl implements IActorMgmtService{
 		if(opt.isPresent()) {
 			
 		Actor	actor1=opt.get();
-		actor.setUpdateCount(actor1.getUpdateCount());
-			actor1.setUpdateBy(System.getProperty("user.name"));
+	//	actor.setUpdateCount(actor1.getUpdateCount());
+		//	actor1.setUpdateBy(System.getProperty("user.name"));
 			actorRepo.save(actor);
 			
 			return actor1.getAid()+"Actor data is modified";
